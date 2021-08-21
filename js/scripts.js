@@ -83,11 +83,11 @@ function CarritoTotal() {
     let Total = 0;
     const itemCartTotal = document.querySelector('.itemCartTotal')
     carrito.forEach((item) => {
-        const precio = Number(item.precio.replace("$", ''))
+        const precio = Number(item.precio.replace("Q", ''))
         Total = Total + precio * item.cantidad
     })
 
-    itemCartTotal.innerHTML = `Total $${Total}`
+    itemCartTotal.innerHTML = `Total Q ${Total}.00`
     addLocalStorage()
 }
 
